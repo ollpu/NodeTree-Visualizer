@@ -15,6 +15,8 @@ void drawNodeWChildren(int id, float curScale) {
     case 1: ellipse(0, 0, 50, 50); break;
     default: sphere(25); break;
   }
+  //Select this node if it is pressed. 
+  if (isHoverAB(-25, -25, 25, 25) && mousePressed) { selectedNode = id; }
   if (selectedNode == id) {
     //This node is selected
     pushMatrix();

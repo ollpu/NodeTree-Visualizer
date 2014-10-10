@@ -1,6 +1,6 @@
-boolean draw = true;
 
-int oldHeight, oldWidth;
+
+
 
 int pressX, pressY;
 boolean pressing = false, oldPressing = false;
@@ -9,14 +9,9 @@ void draw(){
   
   if(renderMode != 1) lights();
   
-  //Draw nodes again if screen size has changed
-  if (oldWidth != width || oldHeight != height) { draw = true; panX = 0; panY = 0; }
-  oldWidth = width;
-  oldHeight = height;
+  
   
   //----------NODES-----------//
-  if (draw) {
-    draw = false;
     
     //Draw background
     background(0);
@@ -34,7 +29,7 @@ void draw(){
     drawNodeWChildren(0, 1);
     popMatrix();
     
-  }
+  
   //-------END: NODES-------//
   
   
@@ -67,7 +62,6 @@ void draw(){
     //Button has been pressed -> set pan & scale to defaults and make sure nodes are redrawn
     panX = 0; panY = 0;
     treeScale = 1;
-    draw = true;
   }
   
   switch (homeButtonState) {
