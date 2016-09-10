@@ -6,7 +6,7 @@ boolean inBounds2D(int pointerX, int pointerY, int bound1X, int bound1Y, int bou
   
 }
 
-//Is a point inside the bounds of a line? (1 dimensional) // sorry for 1(direeeaactiroon)...
+//Is a point inside the bounds of a line? (1 dimensional)
 boolean inBounds1D(int pointer, int bound1, int bound2) {
   
   return pointer >= bound1 && pointer < bound2;
